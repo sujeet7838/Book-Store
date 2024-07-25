@@ -67,7 +67,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: TColor.primary,
-                        fontSize: 25,
+                        fontSize: 30,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -83,12 +83,12 @@ class _OnboardingViewState extends State<OnboardingView> {
                       ),
                     ),
                     SizedBox(
-                      height: media.width * 0.25,
+                      height: media.width * 0.05,
                     ),
                     Image.asset(
                       pObj["img"].toString(),
-                      width: media.width * 0.8,
-                      height: media.width * 0.8,
+                      // width: media.width * 0.3,
+                      // height: media.width * 0.3,
                       fit: BoxFit.fitWidth,
                     ),
                   ],
