@@ -1,3 +1,5 @@
+import 'package:bookstore/view/login/forgot_password_view.dart';
+import 'package:bookstore/view/main_tab/main_tab_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -61,8 +63,8 @@ class _SignInViewState extends State<SignInView> {
       );
       if (mounted) {
         // print("MasinTabView");
-        // Navigator.pushReplacement(context,
-        //     MaterialPageRoute(builder: (context) => const MainTabView()));
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const MainTabView()));
       }
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar((const SnackBar(
@@ -80,7 +82,6 @@ class _SignInViewState extends State<SignInView> {
     } on FirebaseException catch (e) {
       String errorMessage =
           "Invalid Credentials! Check your email & password again.";
-
       if (e.code == 'user-not-found') {
         errorMessage = "No user found for that email.";
       } else if (e.code == 'wrong-password') {
@@ -222,11 +223,11 @@ class _SignInViewState extends State<SignInView> {
                     ),
                     TextButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) =>
-                        //             const ForgotPasswordView()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const ForgotPasswordView()));
                       },
                       child: Text(
                         "Forgot Your Password?",
